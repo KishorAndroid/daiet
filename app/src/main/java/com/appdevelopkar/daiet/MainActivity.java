@@ -89,12 +89,18 @@ public class MainActivity extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             Fragment fragment;
-            switch (position){
-                case 0: fragment = new HomeFragment();
+            switch (position) {
+                case 0:
+                    fragment = new HomeFragment();
                     break;
-                case 1: fragment = new HistoryFragment();
+                case 1:
+                    fragment = new HistoryFragment();
                     break;
-                case 2: fragment = new TipsFragment();
+                case 2:
+                    fragment = new ReportsFragment();
+                    break;
+                case 3:
+                    fragment = new TipsFragment();
                     break;
                 default:
                     return null;
@@ -104,8 +110,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            // Show 4 total pages.
+            return 4;
         }
 
         @Override
@@ -117,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupTabIcons() {
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_home_white_24dp);
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_history_white_24dp);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_lightbulb_outline_white_24);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_chart_white_24dp);
+        tabLayout.getTabAt(3).setIcon(R.drawable.ic_lightbulb_outline_white_24);
     }
 }
