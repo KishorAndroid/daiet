@@ -11,6 +11,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.appdevelopkar.daiet.home.HomeFragment;
+import com.appdevelopkar.daiet.reports.ReportsFragment;
+import com.appdevelopkar.daiet.tips.TipsFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -94,12 +98,9 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new HomeFragment();
                     break;
                 case 1:
-                    fragment = new HistoryFragment();
-                    break;
-                case 2:
                     fragment = new ReportsFragment();
                     break;
-                case 3:
+                case 2:
                     fragment = new TipsFragment();
                     break;
                 default:
@@ -110,8 +111,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 4 total pages.
-            return 4;
+            // Show 3 total pages.
+            return 3;
         }
 
         @Override
@@ -122,8 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupTabIcons() {
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_home_white_24dp);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_history_white_24dp);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_chart_white_24dp);
-        tabLayout.getTabAt(3).setIcon(R.drawable.ic_lightbulb_outline_white_24);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_chart_white_24dp);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_lightbulb_outline_white_24);
     }
 }
