@@ -8,17 +8,30 @@
             type="com.appdevelopkar.daiet.home.HomeViewModel" />
     </data>
 
-    <RelativeLayout
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="8dp">
+        android:layout_height="match_parent">
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="HOME"
-            android:fontFamily="sans-serif"/>
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="16dp">
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="HOME" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:onClick="@{vm::showAddEntryDialog}" />
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
 </layout>
