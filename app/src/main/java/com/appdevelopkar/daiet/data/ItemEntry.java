@@ -26,14 +26,18 @@ public class ItemEntry implements Parcelable {
     public double itemPrice;
 
     @ColumnInfo(name = "date_time")
-    public String dateTime;
+    public long dateTime;
 
     @ColumnInfo(name = "time_stamp")
     public long timeStamp;
 
-
-
-    public ItemEntry() {
+    public ItemEntry(long rowId, double categoryId, String itemName, double itemPrice, long dateTime, long timeStamp) {
+        this.rowId = rowId;
+        this.categoryId = categoryId;
+        this.itemName = itemName;
+        this.itemPrice = itemPrice;
+        this.dateTime = dateTime;
+        this.timeStamp = timeStamp;
     }
 
     protected ItemEntry(Parcel in) {
@@ -41,7 +45,7 @@ public class ItemEntry implements Parcelable {
         categoryId = in.readDouble();
         itemName = in.readString();
         itemPrice = in.readDouble();
-        dateTime = in.readString();
+        dateTime = in.readLong();
         timeStamp = in.readLong();
     }
 
@@ -51,7 +55,7 @@ public class ItemEntry implements Parcelable {
         dest.writeDouble(categoryId);
         dest.writeString(itemName);
         dest.writeDouble(itemPrice);
-        dest.writeString(dateTime);
+        dest.writeLong(dateTime);
         dest.writeLong(timeStamp);
     }
 

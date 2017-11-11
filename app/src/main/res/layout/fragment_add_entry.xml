@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/white"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -14,7 +15,6 @@
         android:checkedButton="@id/rb_expenses"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -25,57 +25,51 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:fontFamily="sans-serif"
-            android:text="Expenses" />
+            android:text="@string/expenses" />
 
         <RadioButton
             android:id="@+id/rb_saving"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
             android:fontFamily="sans-serif"
-            android:text="Investment / Saving" />
+            android:text="@string/investment_saving" />
     </RadioGroup>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/et_item_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:fontFamily="sans-serif"
-        android:hint="Enter Item Name"
+        android:hint="@string/enter_item_name"
         android:inputType="textCapWords"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/et_item_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/enter_item_price"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/et_item_name" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Button"
+        android:fontFamily="sans-serif"
+        android:text="@string/save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
-
+        app:layout_constraintTop_toBottomOf="@+id/et_item_price" />
 
 </android.support.constraint.ConstraintLayout>
